@@ -1,6 +1,8 @@
 <template>
-  <SearchBar @search="updateSearchTerm" />
-  <RecipeList :recipes="recipes" class="recipe-list" />
+  <div>
+    <SearchBar @search="updateSearchTerm" />
+    <RecipeList :recipes="recipes" />
+  </div>
 </template>
 
 <script>
@@ -22,9 +24,9 @@ export default {
 
   mounted() {
     axios
-      .get("https://www.themealDB.com/api/json/v1/1/search.php?s=")
+      .get("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=")
       .then((response) => {
-        this.recipes = response.data.meals;
+        this.recipes = response.data.drinks;
       });
   },
 
@@ -37,26 +39,26 @@ export default {
       if (this.searchTerm) {
         Promise.all([
           axios.get(
-            `https://www.themealdb.com/api/json/v1/1/search.php?s=${this.searchTerm}`
+            `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${this.searchTerm}`
           ),
           axios.get(
-            `https://www.themealdb.com/api/json/v1/1/filter.php?c=${this.searchTerm}`
+            `https://www.thecocktaildb.com/api/json/v1/1/search.php?i=${this.searchTerm}`
           ),
           axios.get(
-            `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${this.searchTerm}`
+            `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?iid=${this.searchTerm}`
           ),
           axios.get(
-            `https://www.themealdb.com/api/json/v1/1/filter.php?a=${this.searchTerm}`
+            `https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=${this.searchTerm}`
           ),
         ])
           .then((responses) => {
-            let meals = [];
+            let drinks = [];
             responses.forEach((response) => {
-              if (response.data.meals) {
-                meals = [...meals, ...response.data.meals];
+              if (response.data.drinks) {
+                drinks = [...drinks, ...response.data.drinks];
               }
             });
-            this.recipes = meals;
+            this.recipes = drinks;
           })
           .catch((error) => {
             console.error(error);

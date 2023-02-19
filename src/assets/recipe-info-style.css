@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,300;0,8..144,500;1,8..144,300;1,8..144,400&display=swap");
+.recipe-info-container {
+  font-family: "Roboto Serif", sans-serif;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 2rem 2rem;
+  text-align: left;
+  color: #596e59;
+}
+
+.recipe-info-container h1 {
+  font-size: 42px;
+  margin: 1rem 0 0 0;
+}
+
+.category {
+  padding-bottom: 1rem;
+}
+
+.category span {
+  margin: 0 10px 0 0;
+  border: 1px solid rgba(147, 155, 119, 0.8);
+  padding: 0.2rem;
+  border-radius: 3px;
+  opacity: 0.7;
+  font-size: 14px;
+}
+
+.details {
+  display: flex;
+  gap: 2rem;
+}
+
+.details img {
+  max-height: 500px;
+  max-width: 100%;
+  height: auto;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+#ingredients-title,
+#instructions-title {
+  font-size: 28px;
+  margin: 0;
+}
+
+.ingredients-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.instructions-paragraph {
+  border-bottom: 1px solid;
+  padding-bottom: 2rem;
+  max-width: 40vw;
+}
+
+.recipe-btn {
+  background-color: #b99b6b;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+  padding-inline: 3rem;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 2rem;
+  width: 100%;
+  transition: all 0.5s;
+}
+
+.recipe-btn:hover {
+  background-color: #f1dbbf;
+  color: #b99b6b;
+}
+
+@media (max-width: 800px) {
+  .details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .details img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .instructions p {
+    margin: 0;
+    max-width: 80vw;
+  }
+}
