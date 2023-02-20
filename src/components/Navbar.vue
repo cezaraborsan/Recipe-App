@@ -16,8 +16,7 @@ export default {
 
   methods: {
     pageReload() {
-      window.location.href =
-        "https://cezaraborsan.github.io/Recipe-Database-App/#/";
+      window.location.href = "https://cezaraborsan.github.io/Recipe-App/#/";
     },
   },
 };
@@ -84,6 +83,10 @@ a {
 @media (max-width: 600px) {
   nav {
     padding: 0.5rem 1.5rem;
+  }
+
+  .router:nth-child(2) {
+    margin-right: 0;
   }
 }
 </style>

@@ -98,7 +98,7 @@ input[type="text"] {
 
 button {
   font-family: "DM Sans", sans-serif;
-  padding: 20px;
+  padding: 20px 25px;
   border: none;
   font-weight: bold;
   background-color: #f9f5e7;

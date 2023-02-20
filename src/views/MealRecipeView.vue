@@ -71,5 +71,5 @@ export default {
 </script>
 
 <style scoped>
-@import "/src/assets/recipe-info-style.css";
+@import "/src/assets/recipe-info-styles.scss";
 </style>

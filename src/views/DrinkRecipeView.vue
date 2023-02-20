@@ -21,7 +21,7 @@
         </ul>
         <template v-if="recipe.strVideo">
           <a :href="recipe.strVideo" target="_blank">
-            <button>Video</button>
+            <button class="recipe-btn">Video</button>
           </a>
         </template>
       </div>
@@ -79,5 +79,5 @@ export default {
 </script>
 
 <style scoped>
-@import "/src/assets/recipe-info-style.css";
+@import "/src/assets/recipe-info-styles.scss";
 </style>
