@@ -94,6 +94,7 @@ input[type="text"] {
   margin-right: 10px;
   border-radius: 50px;
   background-color: #f9f5e7;
+  max-width: 1200px;
 }
 
 button {

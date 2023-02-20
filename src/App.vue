@@ -30,7 +30,7 @@ body {
 .app-container {
   margin: 0 auto;
   width: 100vw;
-  max-width: 1900px;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   min-height: 100vh;

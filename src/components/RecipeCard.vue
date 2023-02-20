@@ -129,9 +129,10 @@ export default {
     font-size: 12px;
   }
 
-  h3 {
+  .card-info h3 {
     font-size: 24px;
     margin: 0 0.6rem 0.8rem 0;
+    padding: 0;
     cursor: pointer;
     overflow: hidden;
     text-overflow: ellipsis;

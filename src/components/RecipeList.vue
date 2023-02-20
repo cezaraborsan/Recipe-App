@@ -35,6 +35,8 @@ export default {
 .list-container {
   display: flex;
   justify-content: center;
+  max-width: 2200px;
+  margin: 0 auto;
 }
 
 .card-list {
